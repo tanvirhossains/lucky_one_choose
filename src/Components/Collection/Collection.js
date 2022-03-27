@@ -7,8 +7,8 @@ import './Collection.css'
 const Collection = () => {
 
     const [guns, setguns] = useState([])
-    const [selection, setSelection] = useState([])
-    console.log(selection)
+    const [cart, setSelection] = useState([])
+    console.log(cart)
 
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const Collection = () => {
     }, [])
 
     const addCartHandle = (selection) => {
-        const newSelection = [selection]
+        const newSelection = [...cart , selection]
         setSelection(newSelection)
         console.log(newSelection)
     }
@@ -38,7 +38,7 @@ const Collection = () => {
                 
                 <Selection > </Selection>
                 {
-                    selection.map((item) => <h1>{item.name}</h1>)
+                    cart.map((item) => <h2 key={item.id}>{item.name}</h2>)
                 }
             </div>
 
