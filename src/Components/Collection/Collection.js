@@ -11,10 +11,17 @@ const Collection = () => {
          .then(res => res.json())
          .then (data => setguns(data))
      },[])
+
+     const addCartHandle = (id)=>{
+        console.log(id)
+    }
     return (
         <div className='collection'>
             {
-                guns.map(pd => <Product product={pd}></Product>)
+                guns.map(pd => <Product 
+                    product={pd}
+                    addCartHandle={addCartHandle}
+                    ></Product>)
             }
         </div>
     );
