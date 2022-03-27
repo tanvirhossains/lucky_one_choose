@@ -3,5 +3,7 @@
     background-color:darkslategrey;
     padding: 10px;
     color: aliceblue;
+    position: sticky;
+    top: 0;
     
 }

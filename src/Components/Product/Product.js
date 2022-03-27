@@ -4,7 +4,6 @@ import { faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import './Product.css'
 
 const Product = ({product , addCartHandle}) => {
-    console.log(product)
 
 
   
@@ -15,7 +14,7 @@ const Product = ({product , addCartHandle}) => {
                 <div>
                 <h2>Name: {product.name}</h2>
                 <p>Price: {product.price}</p>
-                <button onClick={() => addCartHandle(product.id)} className='btn'>  Add to cart 
+                <button onClick={() => addCartHandle(product)} className='btn'>  Add to cart 
                 <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
                 </button>
                 </div>
