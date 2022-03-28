@@ -10,8 +10,14 @@ const Answer = () => {
                 <li>Its have Components which work as stalk of tree and can be connected with the main Components to show UI</li>
                 <li>In react have a opportunity to use html with the power of javascript </li>
             </ul>
+            <h2 className='ques'>props and data </h2>
+            <ul>
+                <li>props work for external work while state work as internal control according to the randers in component</li>
+                <li>in state data can be set and change but props use to get the state's data and con not change</li>
+                <li>state is mutable but props is immutable</li>
 
-            
+            </ul>
+
 
         </div>
     );

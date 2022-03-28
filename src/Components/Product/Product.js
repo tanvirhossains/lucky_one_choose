@@ -9,9 +9,9 @@ const Product = ({product , addCartHandle}) => {
   
     return (
         <div className='pic-container'>
-            <div>
+            <div className='card'>
                 <img src={product.img} alt="" />
-                <div>
+                <div className='item-info'>
                 <h2>Name: {product.name}</h2>
                 <p>Price: {product.price}</p>
                 <button onClick={() => addCartHandle(product)} className='btn'>  Add to cart 

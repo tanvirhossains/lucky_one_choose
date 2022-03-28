@@ -7,33 +7,36 @@ const Collection = () => {
     const [guns, setguns] = useState([])
     const [cart, setSelection] = useState([])
 
-    const randomArray = ()=>{
-         const random = cart[Math.floor(Math.random()*cart.length)]
-        
-         console.log(random)
-          return random 
+
+    let value = []
+    const randomArray = () => {
+        const random = cart[Math.floor(Math.random() * cart.length)]
+        value.push(random.name)
+        console.log(random.name)
+        // return random
     }
-   
+
+    console.log(value)
     console.log(cart)
 
-// randomArray()
+    // randomArray()
 
 
     useEffect(() => {
         fetch('product.json')
             .then(res => res.json())
             .then(data => setguns(data))
+
+
     }, [])
 
     const addCartHandle = (selection) => {
-        const newSelection = [...cart , selection]
+        const newSelection = [...cart, selection]
+
         setSelection(newSelection)
         console.log(newSelection)
 
 
-        // const randomArray = () =>{
-            
-        // }
     }
 
 
@@ -50,12 +53,11 @@ const Collection = () => {
                 }
             </div>
             <div className='selection-container'>
-                
-                <Selection  randomArray ={randomArray}> </Selection>
+
+                <Selection randomArray={randomArray}> </Selection>
                 {
                     cart.map((item) => <h2 key={item.id}>{item.name}</h2>)
                 }
-
             </div>
 
         </div>
