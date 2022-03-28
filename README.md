@@ -1,3 +1,6 @@
+deployed link: [https://creative-fox-9857ce.netlify.app/] (https://creative-fox-9857ce.netlify.app/)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
