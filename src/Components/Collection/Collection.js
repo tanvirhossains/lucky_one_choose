@@ -3,12 +3,20 @@ import Product from '../Product/Product';
 import Selection from '../Selection/Selection';
 import './Collection.css'
 
-
 const Collection = () => {
-
     const [guns, setguns] = useState([])
     const [cart, setSelection] = useState([])
+
+    const randomArray = ()=>{
+         const random = cart[Math.floor(Math.random()*cart.length)]
+        
+         console.log(random)
+          return random 
+    }
+   
     console.log(cart)
+
+// randomArray()
 
 
     useEffect(() => {
@@ -21,7 +29,14 @@ const Collection = () => {
         const newSelection = [...cart , selection]
         setSelection(newSelection)
         console.log(newSelection)
+
+
+        // const randomArray = () =>{
+            
+        // }
     }
+
+
     return (
         <div className='collection'>
 
@@ -36,14 +51,16 @@ const Collection = () => {
             </div>
             <div className='selection-container'>
                 
-                <Selection > </Selection>
+                <Selection  randomArray ={randomArray}> </Selection>
                 {
                     cart.map((item) => <h2 key={item.id}>{item.name}</h2>)
                 }
+
             </div>
 
         </div>
     );
 };
+
 
 export default Collection;
